@@ -72,7 +72,7 @@ $hotels = [
       </div>
 
       <div class="d-flex align-items-center">
-        <label for="voteSearch" class="form-label">Voto</label>
+        <label for="voteSearch" class="form-label">Voto minimo</label>
         <input type="number" class="form-control m-1" id="voteSearch" name='vote' min=1 max=5>
       </div>
 
@@ -99,7 +99,7 @@ $hotels = [
             continue;
           }
 
-          if ($vote && $hotel['vote'] !== $vote) {
+          if ($vote && $hotel['vote'] <= $vote) {
             continue;
           }
 
